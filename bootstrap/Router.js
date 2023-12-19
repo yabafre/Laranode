@@ -106,10 +106,11 @@ const router = {
     findRoute: function (method, url) {
         let urlMatch = false;
         for (let route of this.routes) {
-            if (route.regex.test(url)) {
+            let normalizedUrl = url.endsWith('/') ? url.slice(0, -1) : url;
+            if (route.regex.test(normalizedUrl)) {
                 urlMatch = true;
                 if (route.method === method) {
-                    const match = url.match(route.regex);
+                    const match = normalizedUrl.match(route.regex);
                     const params = {};
                     if (route.paramNames.length > 0 && match) {
                         route.paramNames.forEach((name, index) => {
