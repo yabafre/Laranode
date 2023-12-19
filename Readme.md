@@ -15,6 +15,10 @@ Ce projet Node.js est une application backend qui implémente un système CRUD p
 - Node.js
 - PostgreSQL
 
+## Configuration
+
+Pour configurer le projet, renommez le fichier `.env.example` en `.env` et modifiez les variables d'environnement selon votre configuration.
+
 ## Installation
 
 Pour installer les dépendances du projet, exécutez :
@@ -32,7 +36,9 @@ npm start
 
 ## Structure du Projet
 
+```bash
 [laranode]/
+│
 ├── app/
 │   ├── Controllers/
 │   │   └── UserController.js
@@ -42,14 +48,17 @@ npm start
 │   │   └── UserRepository.js
 │   └── Validators/
 │       └── UserValidator.js
+│
 ├── bootstrap/
 │   ├── Db.js
 │   └── Router.js
+│
 ├── routes/
 │   └── index.js
+│
 ├── .env
 ├── .env.example
 ├── index.js
-├── package-lock.json
-└── [README.md]
+└── package.json
+```
 
