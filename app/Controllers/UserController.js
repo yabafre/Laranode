@@ -65,11 +65,12 @@ const UserController = {
 
         deleteUser: async (req, res) => {
             try {
+                console.log('req.params.id: ',req.params.id)
                 const user = await UserRepository.delete(req.params.id);
                 if (!user) {
                     return res.status(404).json({ errors: ['Utilisateur non trouvé'] });
                 }
-                res.status(204);
+                res.status(204).json();
             } catch (err) {
                 console.log(err);
                 res.status(500).json(err.toString());
