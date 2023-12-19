@@ -1,0 +1,17 @@
+{
+  "name": "laranode",
+  "version": "1.0.0",
+  "scripts": {
+    "start": "nodemon index.js"
+  },
+  "keywords": [],
+  "author": "frederic",
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt": "^5.1.1",
+    "dotenv": "^16.3.1",
+    "formidable": "^3.5.1",
+    "nodemon": "^3.0.2",
+    "pg": "^8.11.3"
+  }
+}
