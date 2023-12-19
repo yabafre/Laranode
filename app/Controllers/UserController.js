@@ -48,7 +48,7 @@ const UserController = {
 
         updateUser: async (req, res) => {
             try {
-                const errors = UserValidator.validated(req.body);
+                const errors = UserValidator.updated(req.body);
                 if (errors.length) {
                     return res.status(422).json({ errors });
                 }
@@ -76,22 +76,6 @@ const UserController = {
             }
         },
 
-        // login: async (req, res) => {
-        //     try {
-        //         const user = await UserRepository.findByEmail(req.body.email);
-        //         if (!user) {
-        //             return res.status(401).json({ errors: ['Utilisateur non trouvé'] });
-        //         }
-        //         const validPassword = await bcrypt.compare(req.body.password, user.password);
-        //         if (!validPassword) {
-        //             return res.status(401).json({ errors: ['Mot de passe incorrect'] });
-        //         }
-        //         res.json(user);
-        //     } catch (err) {
-        //         console.log(err);
-        //         res.status(500).json(err.toString());
-        //     }
-        // }
 };
 
 module.exports = UserController;

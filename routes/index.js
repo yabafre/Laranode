@@ -11,6 +11,5 @@ router.post('/users', UserController.createUser);
 router.put('/users/:id', UserController.updateUser);
 router.delete('/users/:id', UserController.deleteUser);
 
-// Ajoutez ici d'autres routes pour les différentes actions utilisateur
 
 module.exports = router;
