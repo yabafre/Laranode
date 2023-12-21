@@ -31,7 +31,7 @@ npm install
 Pour démarrer le serveur, exécutez :
 
 ```bash
-npm start
+npm run start
 ```
 
 ## Structure du Projet
